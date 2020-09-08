@@ -24,10 +24,10 @@ const Board = props => {
 
   const renderSquare = i => {
     const winnerClass =
-      this.props.winnerSquares &&
-      (this.props.winnerSquares[0] === i ||
-        this.props.winnerSquares[1] === i ||
-        this.props.winnerSquares[2] === i)
+      props.winnerSquares &&
+      (props.winnerSquares[0] === i ||
+        props.winnerSquares[1] === i ||
+        props.winnerSquares[2] === i)
         ? "square--green"
         : "";
 
@@ -41,7 +41,7 @@ const Board = props => {
     );
   };
 
-  return <div>{createBoard(3, 3)}</div>;
+  return <div>{createBoard(4, 4)}</div>;
 };
 
 export default Board;
